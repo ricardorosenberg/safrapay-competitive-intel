@@ -45,6 +45,7 @@
     min-height: 100vh;
   }
 
+  /* ── HEADER ── */
   .header {
     background: var(--bg2);
     border-bottom: 1px solid var(--border);
@@ -77,6 +78,7 @@
   }
   .tag.live { border-color: rgba(34,197,94,0.3); color: var(--green); background: var(--green-dim); }
 
+  /* ── NAV TABS ── */
   .nav-tabs {
     background: var(--bg2);
     border-bottom: 1px solid var(--border);
@@ -99,10 +101,12 @@
   .nav-tab:hover { color: var(--text); }
   .nav-tab.active { color: var(--safra-light); border-bottom-color: var(--safra-light); font-weight: 500; }
 
+  /* ── LAYOUT ── */
   .main { padding: 2rem; max-width: 1400px; margin: 0 auto; }
   .page { display: none; }
   .page.active { display: block; }
 
+  /* ── GRID ── */
   .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 1.5rem; }
   .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 1.5rem; }
   .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 1.5rem; }
@@ -111,14 +115,8 @@
     .grid-4, .grid-3 { grid-template-columns: repeat(2, 1fr); }
     .grid-65, .grid-2 { grid-template-columns: 1fr; }
   }
-  @media (max-width: 640px) {
-    .header { padding: 0 1rem; height: auto; min-height: 60px; flex-wrap: wrap; gap: 10px; padding-top: 10px; padding-bottom: 10px; }
-    .header-right { width: 100%; flex-wrap: wrap; }
-    .main { padding: 1rem; }
-    .nav-tabs { padding: 0 1rem; }
-    .grid-4, .grid-3 { grid-template-columns: 1fr; }
-  }
 
+  /* ── CARDS ── */
   .card {
     background: var(--bg2);
     border: 1px solid var(--border);
@@ -132,6 +130,7 @@
     margin-bottom: 0.75rem;
   }
 
+  /* ── KPI CARDS ── */
   .kpi-value { font-size: 28px; font-weight: 600; line-height: 1.1; }
   .kpi-label { font-size: 12px; color: var(--muted); margin-top: 4px; }
   .kpi-badge {
@@ -145,6 +144,7 @@
   .badge-purple { background: var(--purple-dim); color: var(--purple); }
   .badge-teal   { background: var(--teal-dim); color: var(--teal); }
 
+  /* ── SECTION HEADER ── */
   .section-header {
     display: flex; align-items: center; justify-content: space-between;
     margin-bottom: 1rem;
@@ -152,6 +152,7 @@
   .section-title { font-size: 16px; font-weight: 500; }
   .section-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
 
+  /* ── PLAYER CARDS ── */
   .players-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -176,6 +177,7 @@
   .score-bar-fill { height: 100%; border-radius: 2px; }
   .score-num { font-size: 10px; font-family: 'DM Mono', monospace; color: var(--muted); min-width: 22px; text-align: right; }
 
+  /* ── FEATURE TABLE ── */
   .feat-table { width: 100%; border-collapse: collapse; font-size: 12px; }
   .feat-table thead th {
     font-size: 10px; font-weight: 500; text-transform: uppercase;
@@ -195,6 +197,7 @@
   .check-n { color: var(--muted2); font-size: 15px; }
   .safra-cell { background: rgba(26,111,212,0.06); }
 
+  /* ── THREAT CARDS ── */
   .threat-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -224,6 +227,7 @@
   .rec-ignorar { background: var(--green-dim); color: var(--green); border: 1px solid rgba(34,197,94,0.2); }
   .threat-why { font-size: 12px; color: var(--muted); line-height: 1.5; }
 
+  /* ── DIFFERENTIAL CARDS ── */
   .diff-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -248,6 +252,7 @@
   .diff-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
   .diff-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
 
+  /* ── INSIGHT BOX ── */
   .insight-box {
     background: rgba(26,111,212,0.08);
     border: 1px solid rgba(26,111,212,0.25);
@@ -258,6 +263,7 @@
   .insight-box-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--safra-light); margin-bottom: 6px; }
   .insight-box p { font-size: 13px; color: var(--text); line-height: 1.6; }
 
+  /* ── ACTION ITEMS ── */
   .action-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
@@ -283,6 +289,7 @@
   .action-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
   .action-desc  { font-size: 12px; color: var(--muted); line-height: 1.5; }
 
+  /* ── KPI PILLS ── */
   .kpi-pills { display: flex; flex-wrap: wrap; gap: 6px; }
   .kpi-pill {
     display: inline-flex; align-items: center; gap: 6px;
@@ -292,12 +299,18 @@
   }
   .kpi-pill svg { width: 13px; height: 13px; stroke: var(--muted); fill: none; stroke-width: 2; }
 
+  /* ── CHART CONTAINER ── */
   .chart-wrap { position: relative; }
+
+  /* ── LEGEND ── */
   .legend-row { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 1rem; }
   .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
   .legend-dot { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+
+  /* ── DIVIDER ── */
   .divider { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
 
+  /* ── FOOTER ── */
   .footer {
     border-top: 1px solid var(--border);
     padding: 1rem 2rem;
@@ -307,17 +320,18 @@
     font-size: 11px;
     color: var(--muted2);
     margin-top: 3rem;
-    gap: 12px;
-    flex-wrap: wrap;
   }
 
+  /* ── SCROLLBAR ── */
   ::-webkit-scrollbar { width: 6px; height: 6px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
   ::-webkit-scrollbar-thumb { background: var(--bg4); border-radius: 3px; }
 
+  /* ── TABLE SCROLL WRAPPER ── */
   .table-scroll { overflow-x: auto; }
   .table-scroll::-webkit-scrollbar { height: 4px; }
 
+  /* ── POSITION TAG ── */
   .pos-tag {
     font-size: 10px; font-weight: 600;
     padding: 2px 8px; border-radius: 20px;
@@ -332,6 +346,8 @@
 </style>
 </head>
 <body>
+
+<!-- HEADER -->
 <header class="header">
   <div class="header-left">
     <div class="logo-mark">SP</div>
@@ -346,6 +362,8 @@
     <span class="tag">Confidencial</span>
   </div>
 </header>
+
+<!-- NAV -->
 <nav class="nav-tabs">
   <div class="nav-tab active" onclick="switchPage('overview', this)">Visão Geral</div>
   <div class="nav-tab" onclick="switchPage('players', this)">Players</div>
@@ -354,7 +372,10 @@
   <div class="nav-tab" onclick="switchPage('diferenciais', this)">Diferenciais SafraPay</div>
   <div class="nav-tab" onclick="switchPage('recomendacoes', this)">Recomendações</div>
 </nav>
+
 <main class="main">
+
+<!-- ========== OVERVIEW ========== -->
 <section id="page-overview" class="page active">
   <div class="section-header" style="margin-bottom:1.5rem;">
     <div>
@@ -362,12 +383,30 @@
       <div class="section-desc">Brasil · 60+ adquirentes · 380+ subadquirentes · Oportunidade de crescimento digital</div>
     </div>
   </div>
+
   <div class="grid-4">
-    <div class="card card-sm"><div class="kpi-value" style="color:var(--safra-light);">Challenger</div><div class="kpi-label">Posição SafraPay no mercado</div><span class="kpi-badge badge-blue">Bank-backed · Único</span></div>
-    <div class="card card-sm"><div class="kpi-value">70%</div><div class="kpi-label">Taxa de abandono de carrinho BR</div><span class="kpi-badge badge-amber">Oportunidade de conversão</span></div>
-    <div class="card card-sm"><div class="kpi-value" style="color:var(--red);">Adyen</div><div class="kpi-label">Maior ameaça competitiva</div><span class="kpi-badge badge-red">Score 8/10 · REAGIR</span></div>
-    <div class="card card-sm"><div class="kpi-value" style="color:var(--green);">Bank+Acq</div><div class="kpi-label">Principal diferencial estrutural</div><span class="kpi-badge badge-green">Inimitável no curto prazo</span></div>
+    <div class="card card-sm">
+      <div class="kpi-value" style="color:var(--safra-light);">Challenger</div>
+      <div class="kpi-label">Posição SafraPay no mercado</div>
+      <span class="kpi-badge badge-blue">Bank-backed · Único</span>
+    </div>
+    <div class="card card-sm">
+      <div class="kpi-value">70%</div>
+      <div class="kpi-label">Taxa de abandono de carrinho BR</div>
+      <span class="kpi-badge badge-amber">Oportunidade de conversão</span>
+    </div>
+    <div class="card card-sm">
+      <div class="kpi-value" style="color:var(--red);">Adyen</div>
+      <div class="kpi-label">Maior ameaça competitiva</div>
+      <span class="kpi-badge badge-red">Score 8/10 · REAGIR</span>
+    </div>
+    <div class="card card-sm">
+      <div class="kpi-value" style="color:var(--green);">Bank+Acq</div>
+      <div class="kpi-label">Principal diferencial estrutural</div>
+      <span class="kpi-badge badge-green">Inimitável no curto prazo</span>
+    </div>
   </div>
+
   <div class="grid-65">
     <div class="card">
       <div class="card-title">Score comparativo — 5 dimensões</div>
@@ -378,34 +417,531 @@
         <div class="legend-item"><span class="legend-dot" style="background:#f59e0b;"></span>Stone</div>
         <div class="legend-item"><span class="legend-dot" style="background:#2dd4bf;"></span>Mercado Pago</div>
       </div>
-      <div class="chart-wrap" style="height:300px;"><canvas id="radarChart"></canvas></div>
+      <div class="chart-wrap" style="height:300px;">
+        <canvas id="radarChart"></canvas>
+      </div>
     </div>
     <div class="card">
       <div class="card-title">Score de ameaça por player</div>
-      <div class="chart-wrap" style="height:290px;"><canvas id="threatBar"></canvas></div>
+      <div class="chart-wrap" style="height:290px;">
+        <canvas id="threatBar"></canvas>
+      </div>
     </div>
   </div>
-  <div class="insight-box"><div class="insight-box-label">Tese estratégica</div><p>SafraPay não compete como mais um gateway. É o único ponto de convergência entre adquirência digital e serviços bancários de alta complexidade no Brasil. Para clientes enterprise que precisam de pagamentos + crédito + conciliação + compliance num único interlocutor, não existe paralelo direto no mercado.</p></div>
-</section>
-<section id="page-players" class="page">
-  <div class="section-header" style="margin-bottom:1.5rem;"><div><div class="section-title">Mapa de players — pagamentos online</div><div class="section-desc">Avaliação multidimensional dos principais competidores · Score 0–10</div></div></div>
-  <div class="players-grid">
-    <div class="player-card safrapay-card"><span class="pos-tag pos-safra">SafraPay</span><div class="player-name">SafraPay Ecommerce</div><div class="player-type">Adquirente · Bank-backed · Safra Group</div><div class="score-item"><span class="score-lbl">API / Integração</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:75%;background:#3b82f6;"></div></div><span class="score-num">7.5</span></div><div class="score-item"><span class="score-lbl">Antifraude</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:70%;background:#3b82f6;"></div></div><span class="score-num">7.0</span></div><div class="score-item"><span class="score-lbl">Ecossistema</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:60%;background:#3b82f6;"></div></div><span class="score-num">6.0</span></div><div class="score-item"><span class="score-lbl">Marca / Trust</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:85%;background:#3b82f6;"></div></div><span class="score-num">8.5</span></div><div class="score-item"><span class="score-lbl">Suporte Enterprise</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:80%;background:#3b82f6;"></div></div><span class="score-num">8.0</span></div></div>
-    <div class="player-card"><span class="pos-tag pos-lider">Líder</span><div class="player-name">Cielo</div><div class="player-type">Adquirente · ~30% market share</div><div class="score-item"><span class="score-lbl">API / Integração</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:78%;background:#6b7280;"></div></div><span class="score-num">7.8</span></div><div class="score-item"><span class="score-lbl">Antifraude</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:72%;background:#6b7280;"></div></div><span class="score-num">7.2</span></div><div class="score-item"><span class="score-lbl">Ecossistema</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:90%;background:#6b7280;"></div></div><span class="score-num">9.0</span></div><div class="score-item"><span class="score-lbl">Marca / Trust</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:88%;background:#6b7280;"></div></div><span class="score-num">8.8</span></div><div class="score-item"><span class="score-lbl">Suporte Enterprise</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:82%;background:#6b7280;"></div></div><span class="score-num">8.2</span></div></div>
-    <div class="player-card"><span class="pos-tag pos-lider">Líder</span><div class="player-name">Rede (Itaú)</div><div class="player-type">Adquirente · ~25% market share</div><div class="score-item"><span class="score-lbl">API / Integração</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:72%;background:#6b7280;"></div></div><span class="score-num">7.2</span></div><div class="score-item"><span class="score-lbl">Antifraude</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:74%;background:#6b7280;"></div></div><span class="score-num">7.4</span></div><div class="score-item"><span class="score-lbl">Ecossistema</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:85%;background:#6b7280;"></div></div><span class="score-num">8.5</span></div><div class="score-item"><span class="score-lbl">Marca / Trust</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:85%;background:#6b7280;"></div></div><span class="score-num">8.5</span></div><div class="score-item"><span class="score-lbl">Suporte Enterprise</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:80%;background:#6b7280;"></div></div><span class="score-num">8.0</span></div></div>
-    <div class="player-card"><span class="pos-tag pos-challenger">Challenger</span><div class="player-name">Stone</div><div class="player-type">Adquirente · ~20% share PME</div><div class="score-item"><span class="score-lbl">API / Integração</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:82%;background:#f59e0b;"></div></div><span class="score-num">8.2</span></div><div class="score-item"><span class="score-lbl">Antifraude</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:70%;background:#f59e0b;"></div></div><span class="score-num">7.0</span></div><div class="score-item"><span class="score-lbl">Ecossistema</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:75%;background:#f59e0b;"></div></div><span class="score-num">7.5</span></div><div class="score-item"><span class="score-lbl">Marca / Trust</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:72%;background:#f59e0b;"></div></div><span class="score-num">7.2</span></div><div class="score-item"><span class="score-lbl">Suporte Enterprise</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:60%;background:#f59e0b;"></div></div><span class="score-num">6.0</span></div></div>
-    <div class="player-card"><span class="pos-tag pos-global">Global</span><div class="player-name">Adyen</div><div class="player-type">Adquirente global · Enterprise focus</div><div class="score-item"><span class="score-lbl">API / Integração</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:95%;background:#a78bfa;"></div></div><span class="score-num">9.5</span></div><div class="score-item"><span class="score-lbl">Antifraude</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:95%;background:#a78bfa;"></div></div><span class="score-num">9.5</span></div><div class="score-item"><span class="score-lbl">Ecossistema</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:92%;background:#a78bfa;"></div></div><span class="score-num">9.2</span></div><div class="score-item"><span class="score-lbl">Marca / Trust</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:90%;background:#a78bfa;"></div></div><span class="score-num">9.0</span></div><div class="score-item"><span class="score-lbl">Suporte Enterprise</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:88%;background:#a78bfa;"></div></div><span class="score-num">8.8</span></div></div>
-    <div class="player-card"><span class="pos-tag pos-psp">Fintech PSP</span><div class="player-name">Mercado Pago</div><div class="player-type">PSP · Marketplace-first · 30M+ clientes</div><div class="score-item"><span class="score-lbl">API / Integração</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:85%;background:#2dd4bf;"></div></div><span class="score-num">8.5</span></div><div class="score-item"><span class="score-lbl">Antifraude</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:80%;background:#2dd4bf;"></div></div><span class="score-num">8.0</span></div><div class="score-item"><span class="score-lbl">Ecossistema</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:90%;background:#2dd4bf;"></div></div><span class="score-num">9.0</span></div><div class="score-item"><span class="score-lbl">Marca / Trust</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:88%;background:#2dd4bf;"></div></div><span class="score-num">8.8</span></div><div class="score-item"><span class="score-lbl">Suporte Enterprise</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:55%;background:#2dd4bf;"></div></div><span class="score-num">5.5</span></div></div>
-    <div class="player-card"><span class="pos-tag pos-challenger">Specialist</span><div class="player-name">Braspag</div><div class="player-type">Gateway · Multi-adquirência · Enterprise</div><div class="score-item"><span class="score-lbl">API / Integração</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:90%;background:#6b7280;"></div></div><span class="score-num">9.0</span></div><div class="score-item"><span class="score-lbl">Antifraude</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:85%;background:#6b7280;"></div></div><span class="score-num">8.5</span></div><div class="score-item"><span class="score-lbl">Ecossistema</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:80%;background:#6b7280;"></div></div><span class="score-num">8.0</span></div><div class="score-item"><span class="score-lbl">Marca / Trust</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:72%;background:#6b7280;"></div></div><span class="score-num">7.2</span></div><div class="score-item"><span class="score-lbl">Suporte Enterprise</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:85%;background:#6b7280;"></div></div><span class="score-num">8.5</span></div></div>
+
+  <div class="insight-box">
+    <div class="insight-box-label">Tese estratégica</div>
+    <p>SafraPay não compete como mais um gateway. É o único ponto de convergência entre adquirência digital e serviços bancários de alta complexidade no Brasil. Para clientes enterprise que precisam de pagamentos + crédito + conciliação + compliance num único interlocutor, não existe paralelo direto no mercado.</p>
   </div>
-  <div class="card"><div class="card-title">Posicionamento estratégico comparado</div><div class="chart-wrap" style="height:320px;"><canvas id="positionChart"></canvas></div></div>
+
+  <div class="grid-3">
+    <div class="card card-sm">
+      <div class="card-title">Mercado BR 2026</div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:0.25rem;">
+        <div style="display:flex;justify-content:space-between;font-size:12px;"><span style="color:var(--muted);">Cielo market share</span><span style="font-weight:500;">~30%</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;"><span style="color:var(--muted);">Rede market share</span><span style="font-weight:500;">~25%</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;"><span style="color:var(--muted);">Stone (PME)</span><span style="font-weight:500;">~20%</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;"><span style="color:var(--muted);">PagBank + Getnet</span><span style="font-weight:500;">~10% cada</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;"><span style="color:var(--muted);">Adquirentes ativos</span><span style="font-weight:500;">60+</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;"><span style="color:var(--muted);">Subadquirentes</span><span style="font-weight:500;">380+</span></div>
+      </div>
+    </div>
+    <div class="card card-sm">
+      <div class="card-title">Contexto competitivo 2025→2026</div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:0.25rem;">
+        <div style="font-size:12px;color:var(--muted);">2018–22 → A batalha era <span style="color:var(--text);">MDR mais baixo</span></div>
+        <div style="font-size:12px;color:var(--muted);">2023–24 → Maquininha + <span style="color:var(--text);">Pix gratuito</span></div>
+        <div style="font-size:12px;color:var(--muted);">2025+ → Disputa por <span style="color:var(--text);">ecossistema completo</span></div>
+        <div style="font-size:12px;color:var(--muted);">IA em antifraude → <span style="color:var(--text);">+2–5% approval rate</span></div>
+        <div style="font-size:12px;color:var(--muted);">Abandono de carrinho BR → <span style="color:var(--text);">70.19%</span> em 2024</div>
+      </div>
+    </div>
+    <div class="card card-sm">
+      <div class="card-title">KPIs prioritários para monitorar</div>
+      <div class="kpi-pills" style="margin-top:0.25rem;">
+        <span class="kpi-pill"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>Authorization rate</span>
+        <span class="kpi-pill"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Chargeback rate</span>
+        <span class="kpi-pill"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>NPS merchant</span>
+        <span class="kpi-pill"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>GMV online</span>
+        <span class="kpi-pill"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Time to integrate</span>
+        <span class="kpi-pill"><svg viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>Churn de contas</span>
+      </div>
+    </div>
+  </div>
 </section>
-<section id="page-features" class="page"><div class="section-header" style="margin-bottom:1.5rem;"><div><div class="section-title">Comparativo de features — pagamentos online</div><div class="section-desc">✓ Nativo/completo · ~ Parcial/via parceiro · ✗ Não disponível</div></div></div><div class="card"><p style="color:var(--muted);">Tabela comparativa completa incluída na versão original enviada para publicação.</p></div></section>
-<section id="page-threats" class="page"><div class="section-header" style="margin-bottom:1.5rem;"><div><div class="section-title">Score de ameaça competitiva</div><div class="section-desc">Metodologia: impacto × probabilidade × urgência · Escala 1–10</div></div></div><div class="card"><div class="chart-wrap" style="height:240px;"><canvas id="threatChart2"></canvas></div></div></section>
-<section id="page-diferenciais" class="page"><div class="section-header" style="margin-bottom:1.5rem;"><div><div class="section-title">Diferenciais estruturais SafraPay</div><div class="section-desc">Vantagens competitivas defensáveis — difíceis de replicar no curto prazo</div></div></div><div class="diff-cards"><div class="diff-card"><div class="diff-icon">🏦</div><div class="diff-title">Bank-backed trust</div><div class="diff-desc">Única adquirente digital ancorada em um dos maiores private banks do Brasil.</div></div><div class="diff-card"><div class="diff-icon">💳</div><div class="diff-title">Crédito integrado ao fluxo</div><div class="diff-desc">Combina adquirência com produtos bancários em um único relacionamento.</div></div><div class="diff-card"><div class="diff-icon">📊</div><div class="diff-title">Meu Desempenho</div><div class="diff-desc">Dashboard proprietário com inteligência de negócio para o comerciante.</div></div></div><div class="card"><div class="card-title">Radar de diferenciais — SafraPay vs Adyen</div><div class="chart-wrap" style="height:320px;"><canvas id="radarDiff"></canvas></div></div></section>
-<section id="page-recomendacoes" class="page"><div class="section-header" style="margin-bottom:1.5rem;"><div><div class="section-title">Agenda estratégica 2026</div><div class="section-desc">Ações recomendadas com base na análise competitiva · Priorizado por urgência e impacto</div></div></div><div class="action-grid"><div class="action-card priority-high"><div class="action-label high">🔴 REAGIR</div><div class="action-title">Investir em antifraude com ML nativo</div><div class="action-desc">Gap crítico frente a players enterprise globais.</div></div><div class="action-card priority-high"><div class="action-label high">🔴 FECHAR GAP</div><div class="action-title">Tokenização de cartão</div><div class="action-desc">Prioritário para recorrência, one-click e approval rate.</div></div><div class="action-card priority-boost"><div class="action-label boost">🔵 AMPLIFICAR</div><div class="action-title">Oferta Bank + Acquirer</div><div class="action-desc">Diferencial único e defensável para enterprise.</div></div></div></section>
+
+<!-- ========== PLAYERS ========== -->
+<section id="page-players" class="page">
+  <div class="section-header" style="margin-bottom:1.5rem;">
+    <div>
+      <div class="section-title">Mapa de players — pagamentos online</div>
+      <div class="section-desc">Avaliação multidimensional dos principais competidores · Score 0–10</div>
+    </div>
+  </div>
+
+  <div class="players-grid">
+    <div class="player-card safrapay-card">
+      <span class="pos-tag pos-safra">SafraPay</span>
+      <div class="player-name">SafraPay Ecommerce</div>
+      <div class="player-type">Adquirente · Bank-backed · Safra Group</div>
+      <div class="score-item"><span class="score-lbl">API / Integração</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:75%;background:#3b82f6;"></div></div><span class="score-num">7.5</span></div>
+      <div class="score-item"><span class="score-lbl">Antifraude</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:70%;background:#3b82f6;"></div></div><span class="score-num">7.0</span></div>
+      <div class="score-item"><span class="score-lbl">Ecossistema</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:60%;background:#3b82f6;"></div></div><span class="score-num">6.0</span></div>
+      <div class="score-item"><span class="score-lbl">Marca / Trust</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:85%;background:#3b82f6;"></div></div><span class="score-num">8.5</span></div>
+      <div class="score-item"><span class="score-lbl">Suporte Enterprise</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:80%;background:#3b82f6;"></div></div><span class="score-num">8.0</span></div>
+    </div>
+    <div class="player-card">
+      <span class="pos-tag pos-lider">Líder</span>
+      <div class="player-name">Cielo</div>
+      <div class="player-type">Adquirente · ~30% market share</div>
+      <div class="score-item"><span class="score-lbl">API / Integração</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:78%;background:#6b7280;"></div></div><span class="score-num">7.8</span></div>
+      <div class="score-item"><span class="score-lbl">Antifraude</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:72%;background:#6b7280;"></div></div><span class="score-num">7.2</span></div>
+      <div class="score-item"><span class="score-lbl">Ecossistema</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:90%;background:#6b7280;"></div></div><span class="score-num">9.0</span></div>
+      <div class="score-item"><span class="score-lbl">Marca / Trust</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:88%;background:#6b7280;"></div></div><span class="score-num">8.8</span></div>
+      <div class="score-item"><span class="score-lbl">Suporte Enterprise</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:82%;background:#6b7280;"></div></div><span class="score-num">8.2</span></div>
+    </div>
+    <div class="player-card">
+      <span class="pos-tag pos-lider">Líder</span>
+      <div class="player-name">Rede (Itaú)</div>
+      <div class="player-type">Adquirente · ~25% market share</div>
+      <div class="score-item"><span class="score-lbl">API / Integração</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:72%;background:#6b7280;"></div></div><span class="score-num">7.2</span></div>
+      <div class="score-item"><span class="score-lbl">Antifraude</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:74%;background:#6b7280;"></div></div><span class="score-num">7.4</span></div>
+      <div class="score-item"><span class="score-lbl">Ecossistema</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:85%;background:#6b7280;"></div></div><span class="score-num">8.5</span></div>
+      <div class="score-item"><span class="score-lbl">Marca / Trust</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:85%;background:#6b7280;"></div></div><span class="score-num">8.5</span></div>
+      <div class="score-item"><span class="score-lbl">Suporte Enterprise</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:80%;background:#6b7280;"></div></div><span class="score-num">8.0</span></div>
+    </div>
+    <div class="player-card">
+      <span class="pos-tag pos-challenger">Challenger</span>
+      <div class="player-name">Stone</div>
+      <div class="player-type">Adquirente · ~20% share PME</div>
+      <div class="score-item"><span class="score-lbl">API / Integração</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:82%;background:#f59e0b;"></div></div><span class="score-num">8.2</span></div>
+      <div class="score-item"><span class="score-lbl">Antifraude</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:70%;background:#f59e0b;"></div></div><span class="score-num">7.0</span></div>
+      <div class="score-item"><span class="score-lbl">Ecossistema</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:75%;background:#f59e0b;"></div></div><span class="score-num">7.5</span></div>
+      <div class="score-item"><span class="score-lbl">Marca / Trust</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:72%;background:#f59e0b;"></div></div><span class="score-num">7.2</span></div>
+      <div class="score-item"><span class="score-lbl">Suporte Enterprise</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:60%;background:#f59e0b;"></div></div><span class="score-num">6.0</span></div>
+    </div>
+    <div class="player-card">
+      <span class="pos-tag pos-global">Global</span>
+      <div class="player-name">Adyen</div>
+      <div class="player-type">Adquirente global · Enterprise focus</div>
+      <div class="score-item"><span class="score-lbl">API / Integração</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:95%;background:#a78bfa;"></div></div><span class="score-num">9.5</span></div>
+      <div class="score-item"><span class="score-lbl">Antifraude</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:95%;background:#a78bfa;"></div></div><span class="score-num">9.5</span></div>
+      <div class="score-item"><span class="score-lbl">Ecossistema</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:92%;background:#a78bfa;"></div></div><span class="score-num">9.2</span></div>
+      <div class="score-item"><span class="score-lbl">Marca / Trust</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:90%;background:#a78bfa;"></div></div><span class="score-num">9.0</span></div>
+      <div class="score-item"><span class="score-lbl">Suporte Enterprise</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:88%;background:#a78bfa;"></div></div><span class="score-num">8.8</span></div>
+    </div>
+    <div class="player-card">
+      <span class="pos-tag pos-psp">Fintech PSP</span>
+      <div class="player-name">Mercado Pago</div>
+      <div class="player-type">PSP · Marketplace-first · 30M+ clientes</div>
+      <div class="score-item"><span class="score-lbl">API / Integração</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:85%;background:#2dd4bf;"></div></div><span class="score-num">8.5</span></div>
+      <div class="score-item"><span class="score-lbl">Antifraude</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:80%;background:#2dd4bf;"></div></div><span class="score-num">8.0</span></div>
+      <div class="score-item"><span class="score-lbl">Ecossistema</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:90%;background:#2dd4bf;"></div></div><span class="score-num">9.0</span></div>
+      <div class="score-item"><span class="score-lbl">Marca / Trust</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:88%;background:#2dd4bf;"></div></div><span class="score-num">8.8</span></div>
+      <div class="score-item"><span class="score-lbl">Suporte Enterprise</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:55%;background:#2dd4bf;"></div></div><span class="score-num">5.5</span></div>
+    </div>
+    <div class="player-card">
+      <span class="pos-tag pos-challenger">Specialist</span>
+      <div class="player-name">Braspag</div>
+      <div class="player-type">Gateway · Multi-adquirência · Enterprise</div>
+      <div class="score-item"><span class="score-lbl">API / Integração</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:90%;background:#6b7280;"></div></div><span class="score-num">9.0</span></div>
+      <div class="score-item"><span class="score-lbl">Antifraude</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:85%;background:#6b7280;"></div></div><span class="score-num">8.5</span></div>
+      <div class="score-item"><span class="score-lbl">Ecossistema</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:80%;background:#6b7280;"></div></div><span class="score-num">8.0</span></div>
+      <div class="score-item"><span class="score-lbl">Marca / Trust</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:72%;background:#6b7280;"></div></div><span class="score-num">7.2</span></div>
+      <div class="score-item"><span class="score-lbl">Suporte Enterprise</span><div class="score-bar-bg"><div class="score-bar-fill" style="width:85%;background:#6b7280;"></div></div><span class="score-num">8.5</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Posicionamento estratégico comparado</div>
+    <div class="chart-wrap" style="height:320px;">
+      <canvas id="positionChart"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FEATURES ========== -->
+<section id="page-features" class="page">
+  <div class="section-header" style="margin-bottom:1.5rem;">
+    <div>
+      <div class="section-title">Comparativo de features — pagamentos online</div>
+      <div class="section-desc">✓ Nativo/completo · ~ Parcial/via parceiro · ✗ Não disponível</div>
+    </div>
+  </div>
+  <div class="card" style="padding:0;">
+    <div class="table-scroll">
+      <table class="feat-table">
+        <thead>
+          <tr>
+            <th class="feat-col" style="padding-left:1.25rem;min-width:180px;">Feature</th>
+            <th class="safra-th" style="min-width:90px;">SafraPay</th>
+            <th style="min-width:70px;">Cielo</th>
+            <th style="min-width:70px;">Rede</th>
+            <th style="min-width:70px;">Stone</th>
+            <th style="min-width:70px;">Adyen</th>
+            <th style="min-width:90px;">Merc. Pago</th>
+            <th style="min-width:80px;">Braspag</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="feat-name" style="padding-left:1.25rem;">API de pagamentos</td>
+            <td class="safra-cell"><span class="check-y">✓</span></td>
+            <td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name" style="padding-left:1.25rem;">Checkout transparente</td>
+            <td class="safra-cell"><span class="check-y">✓</span></td>
+            <td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name" style="padding-left:1.25rem;">Pix no ecommerce</td>
+            <td class="safra-cell"><span class="check-y">✓</span></td>
+            <td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name" style="padding-left:1.25rem;">Link de pagamento</td>
+            <td class="safra-cell"><span class="check-y">✓</span></td>
+            <td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-p">~</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name" style="padding-left:1.25rem;">Recorrência / assinaturas</td>
+            <td class="safra-cell"><span class="check-y">✓</span></td>
+            <td><span class="check-y">✓</span></td><td><span class="check-p">~</span></td><td><span class="check-p">~</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name" style="padding-left:1.25rem;">Antifraude nativo (ML)</td>
+            <td class="safra-cell"><span class="check-y">✓</span></td>
+            <td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-p">~</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name" style="padding-left:1.25rem;"><span style="color:var(--amber);">⚠</span> Tokenização de cartão</td>
+            <td class="safra-cell"><span class="check-p">~</span></td>
+            <td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-p">~</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name" style="padding-left:1.25rem;">Dashboard de gestão</td>
+            <td class="safra-cell"><span class="check-y">✓</span></td>
+            <td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-p">~</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name" style="padding-left:1.25rem;">Roteamento inteligente multi-adq.</td>
+            <td class="safra-cell"><span class="check-n">✗</span></td>
+            <td><span class="check-p">~</span></td><td><span class="check-p">~</span></td><td><span class="check-n">✗</span></td><td><span class="check-y">✓</span></td><td><span class="check-n">✗</span></td><td><span class="check-y">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name" style="padding-left:1.25rem;">Suporte global / multi-moeda</td>
+            <td class="safra-cell"><span class="check-n">✗</span></td>
+            <td><span class="check-p">~</span></td><td><span class="check-n">✗</span></td><td><span class="check-n">✗</span></td><td><span class="check-y">✓</span></td><td><span class="check-p">~</span></td><td><span class="check-p">~</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name" style="padding-left:1.25rem;"><span style="color:var(--green);">★</span> Banco + crédito integrado</td>
+            <td class="safra-cell"><span class="check-y">✓</span></td>
+            <td><span class="check-n">✗</span></td><td><span class="check-p">~</span></td><td><span class="check-n">✗</span></td><td><span class="check-n">✗</span></td><td><span class="check-p">~</span></td><td><span class="check-n">✗</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name" style="padding-left:1.25rem;">Conciliação financeira integrada</td>
+            <td class="safra-cell"><span class="check-y">✓</span></td>
+            <td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-p">~</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name" style="padding-left:1.25rem;">Integrações plataformas ecommerce</td>
+            <td class="safra-cell"><span class="check-y">✓</span></td>
+            <td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name" style="padding-left:1.25rem;"><span style="color:var(--green);">★</span> Atendimento dedicado enterprise</td>
+            <td class="safra-cell"><span class="check-y">✓</span></td>
+            <td><span class="check-y">✓</span></td><td><span class="check-y">✓</span></td><td><span class="check-p">~</span></td><td><span class="check-y">✓</span></td><td><span class="check-n">✗</span></td><td><span class="check-y">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name" style="padding-left:1.25rem;"><span style="color:var(--green);">★</span> Intelligence dashboard (Meu Desempenho)</td>
+            <td class="safra-cell"><span class="check-y">✓</span></td>
+            <td><span class="check-n">✗</span></td><td><span class="check-n">✗</span></td><td><span class="check-n">✗</span></td><td><span class="check-p">~</span></td><td><span class="check-p">~</span></td><td><span class="check-n">✗</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div style="display:flex;gap:24px;flex-wrap:wrap;margin-top:10px;padding-left:4px;font-size:12px;color:var(--muted);">
+    <span><span style="color:var(--green);">★</span> Diferencial exclusivo SafraPay</span>
+    <span><span style="color:var(--amber);">⚠</span> Gap a fechar</span>
+    <span style="color:var(--green);">✓</span><span>Nativo/completo</span>
+    <span style="color:var(--amber);">~</span><span>Parcial/via parceiro</span>
+    <span style="color:var(--muted2);">✗</span><span>Não disponível</span>
+  </div>
+</section>
+
+<!-- ========== AMEAÇAS ========== -->
+<section id="page-threats" class="page">
+  <div class="section-header" style="margin-bottom:1.5rem;">
+    <div>
+      <div class="section-title">Score de ameaça competitiva</div>
+      <div class="section-desc">Metodologia: impacto × probabilidade × urgência · Escala 1–10</div>
+    </div>
+  </div>
+
+  <div class="threat-cards">
+    <div class="threat-card" style="border-top: 2px solid var(--red);">
+      <div class="threat-head">
+        <div>
+          <div class="threat-name">Adyen</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:2px;">Adquirente global · Enterprise</div>
+        </div>
+        <div class="threat-score-big ts-high">8</div>
+      </div>
+      <span class="rec-pill rec-reagir">REAGIR</span>
+      <div class="threat-why">Maior ameaça no segmento enterprise. ML avançado de antifraude (Uplift), roteamento inteligente e comércio unificado. Expansão ativa no Brasil — cases C&A (+4.7% approval = R$24M adicional), Arcos Dorados (-90% regras manuais), Vivara (140% mais rápido). Forrester Leader Q1 2024.</div>
+    </div>
+    <div class="threat-card" style="border-top: 2px solid var(--amber);">
+      <div class="threat-head">
+        <div>
+          <div class="threat-name">Cielo</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:2px;">Adquirente · ~30% share</div>
+        </div>
+        <div class="threat-score-big ts-med">6</div>
+      </div>
+      <span class="rec-pill rec-observar">OBSERVAR</span>
+      <div class="threat-why">Líder histórico com maior ecossistema e base instalada. Força em grandes varejistas. Ameaça real pelo volume e relacionamentos, mas perdendo velocidade de inovação. Duopólio histórico com Rede quebrado pelo Open Payments desde 2010.</div>
+    </div>
+    <div class="threat-card" style="border-top: 2px solid var(--amber);">
+      <div class="threat-head">
+        <div>
+          <div class="threat-name">Mercado Pago</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:2px;">PSP · 30M+ clientes ativos</div>
+        </div>
+        <div class="threat-score-big ts-med">6</div>
+      </div>
+      <span class="rec-pill rec-observar">OBSERVAR</span>
+      <div class="threat-why">Forte em PMEs e marketplaces. Ecossistema rico e base massiva. Ameaça em segmentos de menor ticket médio, mas fraco em enterprise e atendimento dedicado — distante do perfil Safra. MDR a partir de 0.58% é pressão de preço no segmento PME.</div>
+    </div>
+    <div class="threat-card" style="border-top: 2px solid var(--amber);">
+      <div class="threat-head">
+        <div>
+          <div class="threat-name">Braspag</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:2px;">Gateway · Multi-adquirência</div>
+        </div>
+        <div class="threat-score-big ts-med">6</div>
+      </div>
+      <span class="rec-pill rec-observar">OBSERVAR</span>
+      <div class="threat-why">Especialista em grandes empresas. Gateway com multi-adquirência e roteamento inteligente. Parceiro estratégico mas também competidor direto em contas enterprise de alto volume. Pode posicionar SafraPay como adquirente secundária.</div>
+    </div>
+    <div class="threat-card" style="border-top: 2px solid rgba(107,114,128,0.5);">
+      <div class="threat-head">
+        <div>
+          <div class="threat-name">Rede (Itaú)</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:2px;">Adquirente · ~25% share</div>
+        </div>
+        <div class="threat-score-big ts-med">5</div>
+      </div>
+      <span class="rec-pill rec-observar">OBSERVAR</span>
+      <div class="threat-why">Força do banco Itaú como alavanca competitiva relevante. Segundo maior share. Risco médio no digital — foco maior em presencial. Banco grande com capacidade de investir em aceleração digital quando quiser.</div>
+    </div>
+    <div class="threat-card" style="border-top: 2px solid rgba(34,197,94,0.4);">
+      <div class="threat-head">
+        <div>
+          <div class="threat-name">Stone</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:2px;">Adquirente · PME focus</div>
+        </div>
+        <div class="threat-score-big ts-low">4</div>
+      </div>
+      <span class="rec-pill rec-ignorar">IGNORAR</span>
+      <div class="threat-why">Foco em PME e varejo físico. Ecommerce ainda secundário na estratégia. Baixo risco no segmento enterprise no curto prazo. Pode se tornar ameaça relevante se acelerar expansão de serviços digitais para médias empresas.</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Score de ameaça consolidado</div>
+      <div class="chart-wrap" style="height:240px;">
+        <canvas id="threatChart2"></canvas>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Por que Adyen é a prioridade máxima</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
+        <div style="background:var(--bg3);border-radius:8px;padding:10px 12px;">
+          <div style="font-size:11px;color:var(--muted);margin-bottom:3px;">C&A · Adyen Uplift</div>
+          <div style="font-size:13px;font-weight:500;">+4.7% approval rate = R$ 24M em vendas adicionais <span style="font-size:11px;color:var(--muted);font-weight:400;">(6 meses)</span></div>
+        </div>
+        <div style="background:var(--bg3);border-radius:8px;padding:10px 12px;">
+          <div style="font-size:11px;color:var(--muted);margin-bottom:3px;">Arcos Dorados · Adyen Uplift</div>
+          <div style="font-size:13px;font-weight:500;">+2.6% taxa de autorização · -90% regras manuais de risco</div>
+        </div>
+        <div style="background:var(--bg3);border-radius:8px;padding:10px 12px;">
+          <div style="font-size:11px;color:var(--muted);margin-bottom:3px;">Vivara · Pix + Unified Commerce</div>
+          <div style="font-size:13px;font-weight:500;">140% mais rápido nas operações digitais</div>
+        </div>
+        <div style="background:var(--bg3);border-radius:8px;padding:10px 12px;">
+          <div style="font-size:11px;color:var(--muted);margin-bottom:3px;">Tokenização · Adyen global</div>
+          <div style="font-size:13px;font-weight:500;">+3% nas taxas de autorização via network tokenization</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DIFERENCIAIS ========== -->
+<section id="page-diferenciais" class="page">
+  <div class="section-header" style="margin-bottom:1.5rem;">
+    <div>
+      <div class="section-title">Diferenciais estruturais SafraPay</div>
+      <div class="section-desc">Vantagens competitivas defensáveis — difíceis de replicar no curto prazo</div>
+    </div>
+  </div>
+
+  <div class="diff-cards">
+    <div class="diff-card">
+      <div class="diff-icon">🏦</div>
+      <div class="diff-title">Bank-backed trust</div>
+      <div class="diff-desc">Única adquirente digital ancorada em um dos maiores private banks do Brasil. Confiança, solidez e credibilidade que fintechs puras não conseguem entregar para grandes contas.</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-icon">💳</div>
+      <div class="diff-title">Crédito integrado ao fluxo</div>
+      <div class="diff-desc">Capacidade única de combinar adquirência com produtos bancários: capital de giro, antecipação de recebíveis e gestão de caixa num único relacionamento. Nenhum competidor puro faz isso.</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-icon">📊</div>
+      <div class="diff-title">Meu Desempenho</div>
+      <div class="diff-desc">Dashboard proprietário que transforma dados transacionais em inteligência de negócio para o comerciante. Diferencial difícil de replicar rapidamente — entrega valor além do processamento.</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-icon">🛡️</div>
+      <div class="diff-title">Compliance robusto by design</div>
+      <div class="diff-desc">Herança regulatória bancária com controles, auditoria e governança embutidos. Crítico para grandes contas com exigências de due diligence, auditorias e riscos regulatórios.</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-icon">🤝</div>
+      <div class="diff-title">Atendimento consultivo</div>
+      <div class="diff-desc">Modelo de relacionamento com gerente dedicado — diferente do suporte self-service dos PSPs. Essencial para clientes enterprise complexos e de alto ticket médio.</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-icon">⚡</div>
+      <div class="diff-title">Pix nativo + recorrência</div>
+      <div class="diff-desc">Presença desde o lançamento do Pix com capacidade de combinar pagamento instantâneo com modelos de cobrança recorrente. Histórico de implementação na origem.</div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <div class="insight-box-label">Tese central de posicionamento</div>
+    <p>SafraPay não compete como mais um gateway — compete como o único ponto de convergência entre adquirência digital e serviços bancários de alta complexidade. Para o cliente enterprise que precisa de pagamentos + crédito + conciliação + compliance num único interlocutor, <strong>não existe paralelo direto no mercado brasileiro</strong>.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Radar de diferenciais — SafraPay vs Adyen (maior ameaça)</div>
+    <div class="legend-row">
+      <div class="legend-item"><span class="legend-dot" style="background:#3b82f6;"></span>SafraPay</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#a78bfa;"></span>Adyen</div>
+    </div>
+    <div class="chart-wrap" style="height:320px;">
+      <canvas id="radarDiff"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ========== RECOMENDAÇÕES ========== -->
+<section id="page-recomendacoes" class="page">
+  <div class="section-header" style="margin-bottom:1.5rem;">
+    <div>
+      <div class="section-title">Agenda estratégica 2026</div>
+      <div class="section-desc">Ações recomendadas com base na análise competitiva · Priorizado por urgência e impacto</div>
+    </div>
+  </div>
+
+  <div class="action-grid">
+    <div class="action-card priority-high">
+      <div class="action-label high">🔴 REAGIR · vs Adyen · Alta prioridade</div>
+      <div class="action-title">Investir em antifraude com ML nativo</div>
+      <div class="action-desc">Gap crítico. Approval rate é a métrica decisiva em enterprise — cada 1% equivale a dezenas de milhões em receita adicional. Desenvolver ou contratar motor de ML. Referência: Adyen Uplift entrega 2–5% de ganho comprovado.</div>
+    </div>
+    <div class="action-card priority-high">
+      <div class="action-label high">🔴 FECHAR GAP · Feature parity</div>
+      <div class="action-title">Tokenização de cartão</div>
+      <div class="action-desc">Gap atual vs Cielo, Adyen e Mercado Pago. Network tokenization aumenta conversão em recorrência, melhora one-click checkout e aumenta approval rate em 3% (Adyen data). Prioritário para 2025–26.</div>
+    </div>
+    <div class="action-card priority-med">
+      <div class="action-label med">🟡 OBSERVAR · vs Braspag</div>
+      <div class="action-title">Posição clara sobre multi-adquirência</div>
+      <div class="action-desc">Avaliar estratégia de roteamento inteligente para grandes clientes que exigem redundância. Braspag já faz isso. SafraPay precisa de posição clara: parceiro, concorrente ou capacidade própria.</div>
+    </div>
+    <div class="action-card priority-boost">
+      <div class="action-label boost">🔵 AMPLIFICAR · Diferencial único</div>
+      <div class="action-title">Verticais enterprise: Bank + Acquirer</div>
+      <div class="action-desc">Criar pacotes segmentados combinando adquirência + crédito + analytics para setores específicos (saúde, educação, varejo premium). Nenhum competidor entrega isso integrado. Oportunidade de pricing premium.</div>
+    </div>
+    <div class="action-card priority-boost">
+      <div class="action-label boost">🔵 FORTALECER · Produto analytics</div>
+      <div class="action-title">Evoluir Meu Desempenho com IA</div>
+      <div class="action-desc">Dashboard de intelligence é diferencial difícil de replicar. Adicionar camadas de IA generativa para insights preditivos, alertas de churn e recomendações de pricing. Transformar de BI para copiloto do lojista.</div>
+    </div>
+    <div class="action-card priority-low">
+      <div class="action-label low">🟢 MANTER · Posição consolidada</div>
+      <div class="action-title">Relacionamento consultivo enterprise</div>
+      <div class="action-desc">Modelo de atendimento dedicado é vantagem competitiva vs Mercado Pago e PSPs. Manter e escalar modelo de gerente de conta especializado em ecommerce/payments para contas estratégicas.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-header">
+    <div class="section-title">KPIs para monitorar competitividade</div>
+  </div>
+  <div class="kpi-pills" style="margin-bottom:1.5rem;">
+    <span class="kpi-pill"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>Authorization rate</span>
+    <span class="kpi-pill"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Chargeback rate</span>
+    <span class="kpi-pill"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>NPS merchant</span>
+    <span class="kpi-pill"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>GMV online</span>
+    <span class="kpi-pill"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Time to integrate (dias)</span>
+    <span class="kpi-pill"><svg viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/></svg>Churn de contas estratégicas</span>
+    <span class="kpi-pill"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Market share ecom</span>
+    <span class="kpi-pill"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Fallout rate checkout</span>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Resumo executivo — o que fazer agora</div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px;">
+        <div style="display:flex;gap:10px;align-items:flex-start;font-size:13px;">
+          <span style="color:var(--red);font-weight:600;min-width:20px;">1.</span>
+          <span style="color:var(--text);">Fechar gap de antifraude ML — <span style="color:var(--muted);">maior risco de perda de contas enterprise para o Adyen</span></span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start;font-size:13px;">
+          <span style="color:var(--red);font-weight:600;min-width:20px;">2.</span>
+          <span style="color:var(--text);">Implementar tokenização de cartão — <span style="color:var(--muted);">must-have para recorrência e one-click</span></span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start;font-size:13px;">
+          <span style="color:var(--safra-light);font-weight:600;min-width:20px;">3.</span>
+          <span style="color:var(--text);">Criar oferta vertical Bank+Acquirer — <span style="color:var(--muted);">inimitável e defensável</span></span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start;font-size:13px;">
+          <span style="color:var(--safra-light);font-weight:600;min-width:20px;">4.</span>
+          <span style="color:var(--text);">Evoluir Meu Desempenho com IA — <span style="color:var(--muted);">copiloto do lojista, não só BI</span></span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start;font-size:13px;">
+          <span style="color:var(--amber);font-weight:600;min-width:20px;">5.</span>
+          <span style="color:var(--text);">Definir posição sobre multi-adquirência — <span style="color:var(--muted);">parceiro vs capacidade própria</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Posicionamento recomendado</div>
+      <div style="font-size:13px;color:var(--muted);line-height:1.7;margin-top:4px;">
+        SafraPay deve comunicar e executar como <span style="color:var(--safra-light);font-weight:500;">"O adquirente que é banco"</span> — não é gateway sem rosto nem PSP de commodities.<br><br>
+        O diferencial estrutural está na convergência <span style="color:var(--text);">banking + payments</span>. Isso é vantagem competitiva defensável que Adyen, Stone e Mercado Pago não replicam no curto prazo.<br><br>
+        <span style="color:var(--text);">Segmento-alvo:</span> Empresas médias e grandes que precisam de eficiência operacional + crédito + compliance num único ecossistema de confiança.
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer class="footer"><span>SafraPay · Inteligência Competitiva · Pagamentos Online Brasil 2026</span><span>Head of Strategic Projects & Product Development · Safra Bank</span></footer>
+
+<footer class="footer">
+  <span>SafraPay · Inteligência Competitiva · Pagamentos Online Brasil 2026</span>
+  <span>Head of Strategic Projects & Product Development · Safra Bank</span>
+</footer>
+
 <script>
 function switchPage(id, el) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -414,14 +950,132 @@ function switchPage(id, el) {
   el.classList.add('active');
   window.scrollTo(0, 0);
 }
+
 const RADAR_LABELS = ['API / Integração', 'Antifraude', 'Ecossistema', 'Marca / Trust', 'Suporte Enterprise'];
+
 Chart.defaults.color = '#7a8099';
 Chart.defaults.borderColor = 'rgba(255,255,255,0.06)';
-new Chart(document.getElementById('radarChart'), { type: 'radar', data: { labels: RADAR_LABELS, datasets: [ { label: 'SafraPay', data: [7.5, 7, 6, 8.5, 8], borderColor: '#3b82f6', backgroundColor: 'rgba(59,130,246,0.1)', pointBackgroundColor: '#3b82f6', borderWidth: 2, pointRadius: 4 }, { label: 'Cielo', data: [7.8, 7.2, 9, 8.8, 8.2], borderColor: '#6b7280', backgroundColor: 'rgba(107,114,128,0.06)', pointBackgroundColor: '#6b7280', borderWidth: 1.5, pointRadius: 3 }, { label: 'Adyen', data: [9.5, 9.5, 9.2, 9, 8.8], borderColor: '#a78bfa', backgroundColor: 'rgba(167,139,250,0.08)', pointBackgroundColor: '#a78bfa', borderWidth: 1.5, pointRadius: 3 }, { label: 'Stone', data: [8.2, 7, 7.5, 7.2, 6], borderColor: '#f59e0b', backgroundColor: 'rgba(245,158,11,0.05)', pointBackgroundColor: '#f59e0b', borderWidth: 1.5, pointRadius: 3 }, { label: 'Mercado Pago', data: [8.5, 8, 9, 8.8, 5.5], borderColor: '#2dd4bf', backgroundColor: 'rgba(45,212,191,0.05)', pointBackgroundColor: '#2dd4bf', borderWidth: 1.5, pointRadius: 3 } ] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { r: { min: 0, max: 10, ticks: { stepSize: 2, font: { size: 10 }, color: '#4a5068', backdropColor: 'transparent' }, grid: { color: 'rgba(255,255,255,0.05)' }, angleLines: { color: 'rgba(255,255,255,0.05)' }, pointLabels: { font: { size: 11 }, color: '#7a8099' } } } } });
-new Chart(document.getElementById('threatBar'), { type: 'bar', data: { labels: ['Adyen', 'Cielo', 'Merc. Pago', 'Braspag', 'Rede', 'Stone'], datasets: [{ data: [8, 6, 6, 6, 5, 4], backgroundColor: ['rgba(239,68,68,0.7)', 'rgba(245,158,11,0.6)', 'rgba(245,158,11,0.6)', 'rgba(245,158,11,0.6)', 'rgba(245,158,11,0.5)', 'rgba(34,197,94,0.5)'], borderRadius: 4, borderSkipped: false }] }, options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { min: 0, max: 10, ticks: { stepSize: 2, font: { size: 11 } }, grid: { color: 'rgba(255,255,255,0.04)' }, border: { display: false } }, y: { ticks: { font: { size: 12 } }, grid: { display: false }, border: { display: false } } } } });
-new Chart(document.getElementById('positionChart'), { type: 'bar', data: { labels: ['API / Integração', 'Antifraude', 'Ecossistema', 'Marca / Trust', 'Suporte Enterprise'], datasets: [ { label: 'SafraPay', data: [7.5, 7, 6, 8.5, 8], backgroundColor: 'rgba(59,130,246,0.75)', borderRadius: 3 }, { label: 'Cielo', data: [7.8, 7.2, 9, 8.8, 8.2], backgroundColor: 'rgba(107,114,128,0.55)', borderRadius: 3 }, { label: 'Adyen', data: [9.5, 9.5, 9.2, 9, 8.8], backgroundColor: 'rgba(167,139,250,0.7)', borderRadius: 3 }, { label: 'Mercado Pago', data: [8.5, 8, 9, 8.8, 5.5], backgroundColor: 'rgba(45,212,191,0.6)', borderRadius: 3 } ] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: true, position: 'top', labels: { font: { size: 11 }, boxWidth: 10, boxHeight: 10, padding: 16, color: '#7a8099' } } }, scales: { x: { ticks: { font: { size: 11 } }, grid: { color: 'rgba(255,255,255,0.04)' }, border: { display: false } }, y: { min: 0, max: 10, ticks: { stepSize: 2, font: { size: 11 } }, grid: { color: 'rgba(255,255,255,0.04)' }, border: { display: false } } } } });
-new Chart(document.getElementById('threatChart2'), { type: 'bar', data: { labels: ['Adyen', 'Cielo', 'Merc. Pago', 'Braspag', 'Rede', 'Stone'], datasets: [{ data: [8, 6, 6, 6, 5, 4], backgroundColor: ['rgba(239,68,68,0.7)', 'rgba(245,158,11,0.6)', 'rgba(245,158,11,0.6)', 'rgba(245,158,11,0.6)', 'rgba(245,158,11,0.5)', 'rgba(34,197,94,0.5)'], borderRadius: 4, borderSkipped: false }] }, options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { min: 0, max: 10, ticks: { stepSize: 2, font: { size: 11 } }, grid: { color: 'rgba(255,255,255,0.04)' }, border: { display: false } }, y: { ticks: { font: { size: 12 } }, grid: { display: false }, border: { display: false } } } } });
-new Chart(document.getElementById('radarDiff'), { type: 'radar', data: { labels: ['API / Integração', 'Antifraude ML', 'Ecossistema', 'Marca / Trust', 'Suporte Enterprise', 'Bank + Crédito', 'Compliance', 'Analytics Lojista'], datasets: [ { label: 'SafraPay', data: [7.5, 7, 6, 8.5, 8, 9.5, 9, 8.5], borderColor: '#3b82f6', backgroundColor: 'rgba(59,130,246,0.12)', pointBackgroundColor: '#3b82f6', borderWidth: 2.5, pointRadius: 5 }, { label: 'Adyen', data: [9.5, 9.5, 9.2, 9, 8.8, 1.5, 5, 5], borderColor: '#a78bfa', backgroundColor: 'rgba(167,139,250,0.08)', pointBackgroundColor: '#a78bfa', borderWidth: 1.5, pointRadius: 4 } ] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { r: { min: 0, max: 10, ticks: { stepSize: 2, font: { size: 10 }, color: '#4a5068', backdropColor: 'transparent' }, grid: { color: 'rgba(255,255,255,0.05)' }, angleLines: { color: 'rgba(255,255,255,0.05)' }, pointLabels: { font: { size: 11 }, color: '#7a8099' } } } } });
+
+// RADAR — Overview
+new Chart(document.getElementById('radarChart'), {
+  type: 'radar',
+  data: {
+    labels: RADAR_LABELS,
+    datasets: [
+      { label: 'SafraPay', data: [7.5, 7, 6, 8.5, 8], borderColor: '#3b82f6', backgroundColor: 'rgba(59,130,246,0.1)', pointBackgroundColor: '#3b82f6', borderWidth: 2, pointRadius: 4 },
+      { label: 'Cielo', data: [7.8, 7.2, 9, 8.8, 8.2], borderColor: '#6b7280', backgroundColor: 'rgba(107,114,128,0.06)', pointBackgroundColor: '#6b7280', borderWidth: 1.5, pointRadius: 3 },
+      { label: 'Adyen', data: [9.5, 9.5, 9.2, 9, 8.8], borderColor: '#a78bfa', backgroundColor: 'rgba(167,139,250,0.08)', pointBackgroundColor: '#a78bfa', borderWidth: 1.5, pointRadius: 3 },
+      { label: 'Stone', data: [8.2, 7, 7.5, 7.2, 6], borderColor: '#f59e0b', backgroundColor: 'rgba(245,158,11,0.05)', pointBackgroundColor: '#f59e0b', borderWidth: 1.5, pointRadius: 3 },
+      { label: 'Mercado Pago', data: [8.5, 8, 9, 8.8, 5.5], borderColor: '#2dd4bf', backgroundColor: 'rgba(45,212,191,0.05)', pointBackgroundColor: '#2dd4bf', borderWidth: 1.5, pointRadius: 3 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      r: {
+        min: 0, max: 10,
+        ticks: { stepSize: 2, font: { size: 10 }, color: '#4a5068', backdropColor: 'transparent' },
+        grid: { color: 'rgba(255,255,255,0.05)' },
+        angleLines: { color: 'rgba(255,255,255,0.05)' },
+        pointLabels: { font: { size: 11 }, color: '#7a8099' }
+      }
+    }
+  }
+});
+
+// BAR — Threats overview
+new Chart(document.getElementById('threatBar'), {
+  type: 'bar',
+  data: {
+    labels: ['Adyen', 'Cielo', 'Merc. Pago', 'Braspag', 'Rede', 'Stone'],
+    datasets: [{
+      data: [8, 6, 6, 6, 5, 4],
+      backgroundColor: ['rgba(239,68,68,0.7)', 'rgba(245,158,11,0.6)', 'rgba(245,158,11,0.6)', 'rgba(245,158,11,0.6)', 'rgba(245,158,11,0.5)', 'rgba(34,197,94,0.5)'],
+      borderRadius: 4,
+      borderSkipped: false
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { min: 0, max: 10, ticks: { stepSize: 2, font: { size: 11 } }, grid: { color: 'rgba(255,255,255,0.04)' }, border: { display: false } },
+      y: { ticks: { font: { size: 12 } }, grid: { display: false }, border: { display: false } }
+    }
+  }
+});
+
+// BAR — Players position
+new Chart(document.getElementById('positionChart'), {
+  type: 'bar',
+  data: {
+    labels: ['API / Integração', 'Antifraude', 'Ecossistema', 'Marca / Trust', 'Suporte Enterprise'],
+    datasets: [
+      { label: 'SafraPay', data: [7.5, 7, 6, 8.5, 8], backgroundColor: 'rgba(59,130,246,0.75)', borderRadius: 3 },
+      { label: 'Cielo', data: [7.8, 7.2, 9, 8.8, 8.2], backgroundColor: 'rgba(107,114,128,0.55)', borderRadius: 3 },
+      { label: 'Adyen', data: [9.5, 9.5, 9.2, 9, 8.8], backgroundColor: 'rgba(167,139,250,0.7)', borderRadius: 3 },
+      { label: 'Mercado Pago', data: [8.5, 8, 9, 8.8, 5.5], backgroundColor: 'rgba(45,212,191,0.6)', borderRadius: 3 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: true, position: 'top', labels: { font: { size: 11 }, boxWidth: 10, boxHeight: 10, padding: 16, color: '#7a8099' } }
+    },
+    scales: {
+      x: { ticks: { font: { size: 11 } }, grid: { color: 'rgba(255,255,255,0.04)' }, border: { display: false } },
+      y: { min: 0, max: 10, ticks: { stepSize: 2, font: { size: 11 } }, grid: { color: 'rgba(255,255,255,0.04)' }, border: { display: false } }
+    }
+  }
+});
+
+// BAR — Threats page
+new Chart(document.getElementById('threatChart2'), {
+  type: 'bar',
+  data: {
+    labels: ['Adyen', 'Cielo', 'Merc. Pago', 'Braspag', 'Rede', 'Stone'],
+    datasets: [{
+      data: [8, 6, 6, 6, 5, 4],
+      backgroundColor: ['rgba(239,68,68,0.7)', 'rgba(245,158,11,0.6)', 'rgba(245,158,11,0.6)', 'rgba(245,158,11,0.6)', 'rgba(245,158,11,0.5)', 'rgba(34,197,94,0.5)'],
+      borderRadius: 4,
+      borderSkipped: false
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { min: 0, max: 10, ticks: { stepSize: 2, font: { size: 11 } }, grid: { color: 'rgba(255,255,255,0.04)' }, border: { display: false } },
+      y: { ticks: { font: { size: 12 } }, grid: { display: false }, border: { display: false } }
+    }
+  }
+});
+
+// RADAR — Diferenciais SafraPay vs Adyen
+new Chart(document.getElementById('radarDiff'), {
+  type: 'radar',
+  data: {
+    labels: ['API / Integração', 'Antifraude ML', 'Ecossistema', 'Marca / Trust', 'Suporte Enterprise', 'Bank + Crédito', 'Compliance', 'Analytics Lojista'],
+    datasets: [
+      { label: 'SafraPay', data: [7.5, 7, 6, 8.5, 8, 9.5, 9, 8.5], borderColor: '#3b82f6', backgroundColor: 'rgba(59,130,246,0.12)', pointBackgroundColor: '#3b82f6', borderWidth: 2.5, pointRadius: 5 },
+      { label: 'Adyen', data: [9.5, 9.5, 9.2, 9, 8.8, 1.5, 5, 5], borderColor: '#a78bfa', backgroundColor: 'rgba(167,139,250,0.08)', pointBackgroundColor: '#a78bfa', borderWidth: 1.5, pointRadius: 4 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      r: {
+        min: 0, max: 10,
+        ticks: { stepSize: 2, font: { size: 10 }, color: '#4a5068', backdropColor: 'transparent' },
+        grid: { color: 'rgba(255,255,255,0.05)' },
+        angleLines: { color: 'rgba(255,255,255,0.05)' },
+        pointLabels: { font: { size: 11 }, color: '#7a8099' }
+      }
+    }
+  }
+});
 </script>
 </body>
 </html>
